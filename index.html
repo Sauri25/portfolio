@@ -531,17 +531,53 @@
 
   </main>
 
-  <footer id="footer" class="footer position-relative light-background">
+  <footer id="footer" class="footer position-relative light-background"
+    style="background:#222; color:#eee; padding:40px 0; text-align:center;">
 
     <div class="container">
 
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Saurav Raj Aryal</strong> <span>All Rights
-          Reserved</span>
+      <!-- Social Links -->
+      <div style="margin-bottom:20px;">
+        <a href="https://www.facebook.com/sauri.aryal" target="_blank"
+          style="color:#eee; margin:0 10px; font-size:1.5rem; text-decoration:none;">
+          <i class="bi bi-facebook"></i>
+        </a>
+        <a href="https://www.instagram.com/sauri.aryal/" target="_blank"
+          style="color:#eee; margin:0 10px; font-size:1.5rem; text-decoration:none;">
+          <i class="bi bi-instagram"></i>
+        </a>
+        <a href="https://github.com/Sauri25" target="_blank"
+          style="color:#eee; margin:0 10px; font-size:1.5rem; text-decoration:none;">
+          <i class="bi bi-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/saurav-raj-aryal-24a658370/" target="_blank"
+          style="color:#eee; margin:0 10px; font-size:1.5rem; text-decoration:none;">
+          <i class="bi bi-linkedin"></i>
+        </a>
+      </div>
+
+      <!-- Quick Navigation -->
+      <nav style="margin-bottom: 20px;">
+        <a href="#hero" style="color:#bbb; margin: 0 15px; text-decoration:none; font-weight:500;">Home</a>
+        <a href="#about" style="color:#bbb; margin: 0 15px; text-decoration:none; font-weight:500;">About</a>
+        <a href="#resume" style="color:#bbb; margin: 0 15px; text-decoration:none; font-weight:500;">Resume</a>
+        <a href="#portfolio" style="color:#bbb; margin: 0 15px; text-decoration:none; font-weight:500;">Portfolio</a>
+        <a href="#contact" style="color:#bbb; margin: 0 15px; text-decoration:none; font-weight:500;">Contact</a>
+      </nav>
+
+      <!-- Copyright -->
+      <p style="font-size:0.9rem; color:#777;">
+        © <span id="currentYear"></span> <strong style="color:#4caf50;">Saurav Raj Aryal</strong>. All rights reserved.
       </p>
 
     </div>
 
+    <script>
+      // Set current year dynamically
+      document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
   </footer>
+
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
