@@ -243,6 +243,10 @@
           font-size: 1rem;
           color: white;
         }
+
+        .progress-bar {
+          transition: width 1.5s ease-in-out;
+        }
       </style>
 
       <div class="circular-skills" id="skillCircles">
@@ -313,6 +317,17 @@
         }, { threshold: 0.5 });
 
         observer.observe(document.getElementById('skillCircles'));
+        window.onload = () => {
+          const bars = document.querySelectorAll('.progress-bar');
+          bars.forEach(bar => {
+            const val = bar.getAttribute('aria-valuenow');
+            bar.style.width = '0%'; // Start at 0
+            setTimeout(() => {
+              bar.style.width = val + '%'; // Animate to final width
+            }, 100); // delay to trigger transition
+          });
+        };
+
       </script>
 
 
