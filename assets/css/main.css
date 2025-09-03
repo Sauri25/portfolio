@@ -543,20 +543,14 @@ section,
 # Hero Section
 --------------------------------------------------------------*/
 .hero {
-  width: 100%;
-  min-height: 100vh;
   position: relative;
-  padding: 80px 0;
+  width: 100%;
+  height: 100vh;   /* full viewport height */
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.hero {
-  position: relative;
-  width: 100%;
-  height: 100vh; /* full viewport height, adjust if needed */
-  overflow: hidden;
+  padding: 80px 0;
 }
 
 .hero img {
@@ -565,10 +559,11 @@ section,
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;         /* cover the container */
-  object-position: right center; /* focus on the right side */
+  object-fit: cover;          /* cover container */
+  object-position: right;     /* always crop from left, show right side */
   z-index: 1;
 }
+
 
 
 .hero:before {
